@@ -1,0 +1,52 @@
+html {
+    background: url(../img/cielo.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Nunito', 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 80%;
+    margin: 5% auto;
+    border: 10px double aliceblue;
+    color: whitesmoke;
+    min-height: 100vh;
+    padding: 2em;
+    backdrop-filter: brightness(90%);
+}
+
+.contenedor {
+  display: flex;                 /* Coloca los elementos en línea */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center;          /* Alineación vertical (opcional) */
+  padding: 20px 20px 20px 20px; /*Ajusta según lo que necesites */
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    background: linear-gradient(to right, blue, white);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; /* Para navegadores que lo soporten */
+      color: transparent; /* Asegura compatibilidad */
+      text-shadow: 2px 2px 2px darkblue;
+}
+
+p {
+  max-width: 600px;
+  margin: 5% auto 0 auto;
+  padding: 0 1em;
+}
+
+button {
+background-color: white;
+  color: darkblue;
+  border: 5px solid darkblue; 
+  padding: 10px;
+}
+
+button:hover {
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+}

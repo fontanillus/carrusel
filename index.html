@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="img/avion.avif" type="image/x-icon">
+</head>
+
+<body>
+    <h1>CARRUSEL DE IMÁGENES</h1>
+    <p><img src="./img/inicio.jpg" alt="foto" id="imagen"> </p>
+    <br>
+    <div class="contenedor"><button type="button" onclick="retroceder()">Retroceder</button>
+        <span id="nombreImagen">inicio.jpg</span>
+        <button type="button" onclick="avanzar()">Avanzar</button>
+    </div>
+
+    <script>
+        const IMG = document.getElementById('imagen');
+        imagen.style.border = '5px solid darkblue';
+        const NOMBRE = document.getElementById('nombreImagen');
+        nombreImagen.style.color = 'darkblue';
+        const RUTA = "./img/";
+
+        const imagenes = [
+            "barcelona.jpg",
+            "paris.jpg",
+            "newyork.jpg"
+        ];
+
+        let posicion = 0;
+
+        function avanzar() {
+            if (posicion < imagenes.length - 1) {
+                posicion++;
+                mostrarImagen();
+            } else {
+                alert('Es la última imagen');
+            }
+        }
+
+        function retroceder() {
+            if (posicion > 0) {
+                posicion--;
+                mostrarImagen();
+            } else {
+                alert('Es la primera imagen');
+            }
+        }
+
+        function mostrarImagen() {
+            IMG.src = RUTA + imagenes[posicion];
+            NOMBRE.innerHTML = imagenes[posicion];
+        }    
+    </script>
+</body>
+
+</html>
